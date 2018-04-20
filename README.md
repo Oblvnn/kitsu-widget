@@ -17,7 +17,7 @@
 ```
 
 ## Image Example
-<p align="center"><a href="#"><img src="https://i.imgur.com/51cjH4D.png"/></a></p>
+<p align="center"><a href="#"><img src="https://i.imgur.com/rwfFGDK.png"/></a></p>
 
 ## Side Notes
   - [style.css](src/style.css) ~ NOT REQUIRED.

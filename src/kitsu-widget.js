@@ -63,7 +63,8 @@ function updateUserDetails(user, widgetId) {
     appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.mediaReactionsCount + '</div><div class="stat-name">Reactions</div>');
     appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.followingCount + '</div><div class="stat-name">Following</div>');
     appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.postsCount + '</div><div class="stat-name">Posts</div>');
-    appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.gender + '</div><div class="stat-name">Gender</div>');
+    appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.ratingsCount + '</div><div class="stat-name">Ratings</div>');
     appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.commentsCount + '</div><div class="stat-name">Comments</div>');
-    appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.location + '</div><div class="stat-name">Location</div>');
+    appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div style="padding-top:10px" class="count">' + data.attributes.location + '</div><div class="stat-name">Location</div>');
+    appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div style="padding-top:10px" class="count">' + data.attributes.gender + '</div><div class="stat-name">Gender</div>');
 }
