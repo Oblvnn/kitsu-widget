@@ -9,7 +9,7 @@ function ready(fn) {
 }
 
 function start() {
-    appendToWidget("body", "style", "", "@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);.ki-widget-container{text-align:center;display:flex;flex-direction:row;flex-wrap:wrap;margin:0 auto;align-items:center;justify-content:center;color:#333;font-family:'Noto Sans',sans-serif}.ki-widget-personal-details.bio,.ki-widget-stats.count{color:#FD8320}.kitsu-widget{border-radius:1%;border:1px solid #DDD;max-width:380px}.ki-widget-item{flex:1;text-align:center;padding:4px}.ki-widget-photo{flex:2}.ki-widget-photo:hover{opacity:0.8}.ki-widget-photo img{border-radius:100%;max-width:100px}.ki-widget-personal-details{flex:6}.ki-widget-personal-details.full-name{font-size:1.5em;line-height:1.5em}.ki-widget-personal-details.ki-widget-stats.count{font-size:1.2em;font-weight:700}.ki-widget-hr{border:1px solid #DDD}");
+    appendToWidget("body", "style", "", "@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);.ki-widget-link,.ki-widget-link:hover{text-decoration:none}.ki-widget-container{text-align:center;display:flex;flex-direction:row;flex-wrap:wrap;margin: 0 auto;align-items:center;justify-content:center;color:#333;font-family:'Noto Sans',sans-serif}.ki-widget-personal-details .bio,.ki-widget-stats .count{color:#FD8320}.kitsu-widget{border-radius:1%;border:1px solid #DDD;max-width:380px}.ki-widget-item{flex:1;text-align:center;padding:4px}.ki-widget-photo{flex:2}.ki-widget-photo:hover{opacity:0.8}.ki-widget-photo img{border-radius:100%;max-width:100px}.ki-widget-personal-details{flex:6}.ki-widget-personal-details .full-name{font-size:1.5em;line-height:1.5em}.ki-widget-personal-details .ki-widget-stats .count{font-size:1.2em;font-weight:700}.ki-widget-hr{border:1px solid #DDD}.ki-widget-link{color:#FD8320}.ki-widget-follow button{width:100%;height:2em;border:none;background:#ddd}");
     var widgets = document.querySelectorAll('.kitsu-widget');
     for (var i = 0; i < widgets.length; i++) {
         var parentNode = widgets[i];
@@ -52,9 +52,9 @@ function updateUserDetails(user, widgetId) {
     if (data.attributes.gender === "secret") data.attributes.gender = "N/A";
     if (data.attributes.gender === "male") data.attributes.gender = "Male";
     if (data.attributes.gender === "female") data.attributes.gender = "Female";
-    if (data.attributes.about) {appendToWidget(widgetId + " .ki-widget-personal-details", "div", "bio", data.attributes.about);}
     appendToWidget(widgetId + " .ki-widget-photo", "span", "", '<a target="_blank" href="https://kitsu.io/users/' + data.id + '"><img src="' + data.attributes.avatar.medium + '"></a>');
     appendToWidget(widgetId + " .ki-widget-personal-details", "div", "full-name", data.attributes.name);
+    if (data.attributes.about) {appendToWidget(widgetId + " .ki-widget-personal-details", "div", "bio", data.attributes.about);}
     appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.followersCount + '</div><div class="stat-name">Followers</div>');
     appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.reviewsCount + '</div><div class="stat-name">Reviews</div>');
     appendToWidget(widgetId + " .ki-widget-stats", "div", "ki-widget-item", '<div class="count">' + data.attributes.favoritesCount + '</div><div class="stat-name">Favorites</div>');
