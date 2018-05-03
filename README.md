@@ -1,5 +1,5 @@
 <p align="center"><a href="https://kitsu.io/"><img src="https://image.ibb.co/n5R1SS/ki_banner.png"/></a></p>
-<p align="center">🦊 A Kitsu.io widget that shows the given user statistics. by <a href="https://oblivionsan.tk">Oblivion サン</a></p>
+<p align="center">🦊 A Kitsu.io widget that shows the given user statistics. by <a href="https://oblivionsan.tk">Oblivion さん</a></p>
 
 ## Main Features
   - Easy and simple to setup and use.
